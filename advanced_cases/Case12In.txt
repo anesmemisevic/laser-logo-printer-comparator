@@ -1,0 +1,10 @@
+LOGO logo1 RRRDDRRU
+LOGO logo2 LDDLLDDD
+LOGO logo3 DDDLLDDR
+ENGRAVE logo1 5 3
+ENGRAVE logo2 4 4
+ENGRAVE logo3 2 4
+SAME logo1 logo2
+SAME logo1 logo3
+SAME logo2 logo3
+

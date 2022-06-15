@@ -1,0 +1,3 @@
+LOGO logo1 U
+LOGO logo2 D
+SAME logo1 logo2

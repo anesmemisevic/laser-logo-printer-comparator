@@ -1,0 +1,4 @@
+LOGO logo1 LLLLLDDDDDRRRRRUUULL
+ENGRAVE logo1 5 5 # is incorrect see pdf
+ENGRAVE logo1 6 6
+

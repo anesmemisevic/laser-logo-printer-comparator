@@ -1,0 +1,6 @@
+logo1 defined
+logo2 defined
+logo3 defined
+Yes
+Yes
+Yes

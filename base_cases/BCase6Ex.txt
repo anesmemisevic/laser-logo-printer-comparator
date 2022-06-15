@@ -1,0 +1,2 @@
+logo1 defined
+logo2 defined

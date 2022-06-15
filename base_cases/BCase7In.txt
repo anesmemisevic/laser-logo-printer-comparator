@@ -1,0 +1,3 @@
+LOGO logo1 L
+LOGO logo2 R
+SAME logo1 logo2
