@@ -48,7 +48,6 @@ function findEngrave(name) {
 
 function get_engraved(name) {
     // console.log("Referencing " + name)
-    // let array_to_return = []
     arr.forEach(myFunction);
     function myFunction(item) {
         if (String(item.name) == name) {
@@ -61,7 +60,6 @@ function get_engraved(name) {
 
 function set_engraved(name) {
     // console.log("Referencing " + name)
-    // let array_to_return = []
     arr.forEach(myFunction);
     function myFunction(item) {
         if (String(item.name) == name) {
@@ -229,11 +227,9 @@ function checkRowsHorizontally(logo1Array, logo2Array) {
     if (logo1RowNumberWithModif == logo2RowNumberWithModif &&
         logo1RightLeftSymbol == logo2RightLeftSymbol &&
         logo1UpDownSymbol == logo2UpDownSymbol) {
-        // console.log("YES Horizontally")
         return true
     }
     else {
-        // console.log("No Horizontally")
         return false
     }
 }
@@ -260,11 +256,9 @@ function checkRowsVertically(logo1Array, logo2Array) {
     for (let i = 0; i < logo1Array.length; i++) {
         for (let q = 0; q < logo1Array.length; q++) {
             if (logo1Array[q][i] == "-") {
-                // console.log("naso vertical logo1 - ", q, i)
                 logo1RightLeftSymbolVertically++
             }
             else if (logo1Array[q][i] == "|") {
-                // console.log("naso vertical logo 1| ", q, i)
                 logo1UpDownSymbolVertically++
             }
         }
@@ -282,11 +276,9 @@ function checkRowsVertically(logo1Array, logo2Array) {
     for (let j = 0; j < logo2Array.length; j++) {
         for (let x = 0; x < logo2Array.length; x++) {
             if (logo2Array[x][j] == "-") {
-                // console.log("naso vertical logo2 - ", x, j)
                 logo2RightLeftSymbolVertically++
             }
             else if (logo2Array[x][j] == "|") {
-                // console.log("naso vertical logo 2|", x, j)
 
                 logo2UpDownSymbolVertically++
             }
@@ -298,11 +290,9 @@ function checkRowsVertically(logo1Array, logo2Array) {
     if (logo1RowNumberWithModifVertically == logo2RowNumberWithModifVertically &&
         logo1RightLeftSymbolVertically == logo2RightLeftSymbolVertically &&
         logo1UpDownSymbolVertically == logo2UpDownSymbolVertically) {
-        // console.log("YES Vertically")
         return true
     }
     else {
-        // console.log("NO Vertically")
         return false
     }
 }
@@ -330,18 +320,12 @@ function checkLineByLine(logo1Array, logo2Array) {
             // console.log(array[i], i)
             if (!array[i].includes("-") && !array[i].includes("|") &&
                 !array[i + 1].includes("-") && !array[i + 1].includes("|")) {
-                // if (start == 0) {
-                //     i++
-                // }
                 return --i
             }
         }
         if (array[array.length - 1].includes("-") || array[array.length - 1].includes("|")) {
             return i
         }
-        // if (start == 0) {
-        //     ++i
-        // }
         return --i
     }
 
@@ -395,32 +379,10 @@ function checkLineByLine(logo1Array, logo2Array) {
     logo1TotalLengthVertical = logo1endingpointVertical - logo1startingpointVertical
     logo2TotalLengthVertical = logo2endingpointVertical - logo2startingpointVertical
 
-    // console.log("Logo1: horizontal", logo1startingpointHorizontal, logo1endingpointHorizontal)
-    // console.log("Logo2: horizontal", logo2startingpointHorizontal, logo2endingpointHorizontal)
-
-    // console.log("Logo1: vertical", logo1startingpointVertical, logo1endingpointVertical)
-    // console.log("Logo2: vertical", logo2startingpointVertical, logo2endingpointVertical)
-
-
-    // console.log("horizontal total: ", logo1TotalLengthHorizontal, logo2TotalLengthHorizontal, logo2endingpointHorizontal, logo2startingpointHorizontal, logo1endingpointHorizontal, logo1startingpointHorizontal)
-    // console.log("vertical total: ", logo1TotalLengthVertical, logo2TotalLengthVertical, logo2endingpointVertical, logo2startingpointVertical, logo1endingpointVertical, logo1startingpointVertical)
-
     if (logo1TotalLengthHorizontal != logo2TotalLengthHorizontal && logo1TotalLengthVertical != logo2TotalLengthVertical) {
-        // console.log("something not same")
         return false
     }
     else {
-
-        // printArray(logo1Array)
-        // printArray(logo2Array)
-
-        // console.log("vertical")
-        // console.log(logo1startingpointVertical, logo1endingpointVertical)
-        // console.log(logo2startingpointVertical, logo2endingpointVertical)
-
-        // console.log("hor")
-        // console.log(logo1startingpointHorizontal, logo1endingpointHorizontal)
-        // console.log(logo2startingpointHorizontal, logo2endingpointHorizontal)
 
         for (; logo1startingpointHorizontal <= logo1endingpointHorizontal && logo2startingpointHorizontal <= logo2endingpointHorizontal;
             logo1startingpointHorizontal++, logo2startingpointHorizontal++) {
@@ -502,8 +464,6 @@ function checkSame(logo1, logo2) {
                     for (let w = 0; w < arr.length; w++) {
                         if (String(arr[w].name) == String(logo)) {
                             for (let x = 0; x < arr[w].array.length; x++) {
-                                // console.log(arr[w].name + " ime ")
-                                // console.log("deleting " + logo)
                                 for (let s = 0; s < arr[w].array.length; s++) {
                                     arr[w].array[x][s] = "."
                                 }
@@ -570,7 +530,7 @@ function takeInput() {
         rl.on('line', function (line) {
             if (line === "exit" || line === "quit" || line == 'q') {
                 rl.close()
-                return // bail here, so rl.prompt() isn't called again
+                return
             }
             if (line.split(" ")[0] == "LOGO") {
                 input = (String(line)).split(" ")
